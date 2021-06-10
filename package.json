@@ -1,0 +1,77 @@
+{
+  "name": "app_presentation",
+  "version": "1.0.0",
+  "description": "resumen presentation",
+  "main": "server/server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "transpile": "babel ./server/server.js --out-dir-dist-server",
+    "start": "webpack --mode production",
+    "dev": "webpack --mode development",
+    "devserver": "webpack serve --config ./webpack.config.js --mode development",
+    "watch": "webpack --watch --progress --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "pm2 start ./server/server.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dplopezsioux/app_presentation.git"
+  },
+  "author": "dplopez.sioux@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dplopezsioux/app_presentation/issues"
+  },
+  "homepage": "https://github.com/dplopezsioux/app_presentation#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "@babel/preset-react": "^7.13.13",
+    "@iconify-icons/ant-design": "^1.1.0",
+    "@iconify-icons/bi": "^1.1.5",
+    "@iconify-icons/cil": "^1.1.0",
+    "@iconify-icons/flat-color-icons": "^1.1.0",
+    "@iconify-icons/ion": "^1.1.2",
+    "@iconify-icons/logos": "^1.1.9",
+    "@iconify-icons/vscode-icons": "^1.1.4",
+    "@iconify/react": "^2.0.0-rc.9",
+    "@iconify/react-with-api": "^1.0.0-rc.7",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.4",
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "i": "^0.3.6",
+    "mini-css-extract-plugin": "^1.6.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@popperjs/core": "^2.9.2",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^5.0.0",
+    "bootstrap-icons": "^1.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "file-system": "^2.2.2",
+    "nodemailer": "^6.6.1",
+    "npm": "^7.16.0",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.5.2",
+    "react-bootstrap-icons": "^1.5.0",
+    "react-dom": "^17.0.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  }
+}
