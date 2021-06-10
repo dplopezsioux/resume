@@ -1,5 +1,9 @@
 import React from "react";
 
+//
+import { Icon, InlineIcon } from "@iconify/react";
+import welcomeWriteBlog from "@iconify-icons/dashicons/welcome-write-blog";
+
 import avatar from "../img/avatar.png";
 
 const Resume = () => {
@@ -34,9 +38,21 @@ const Resume = () => {
               search of solutions.
             </p>
             <div className="button d-grid gap-2 d-sm-flex justify-content-sm-center">
-              <div type="button" className="btn btn-primary btn-lg px-4 gap-3">
-                Email
-              </div>
+              <a
+                href="https://www.linkedin.com/in/danieleplopez/"
+                type="button"
+                className="btn btn-primary btn-lg px-4 gap-3"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Icon
+                  icon={welcomeWriteBlog}
+                  color="#ffffff"
+                  width="50"
+                  height="50"
+                />
+                linkedin
+              </a>
             </div>
           </div>
         </div>

@@ -977,6 +977,11 @@
   "resolved" "https://registry.npmjs.org/@iconify-icons/cil/-/cil-1.1.0.tgz"
   "version" "1.1.0"
 
+"@iconify-icons/dashicons@^1.1.0":
+  "integrity" "sha512-l539ceihPtCEm+v5JQjDjkRZ5ULPRJLA1OhSePuqTrBWkWx+H6asXkpM4hOB0cR59ynelsK9htSmrPij/JHnRg=="
+  "resolved" "https://registry.npmjs.org/@iconify-icons/dashicons/-/dashicons-1.1.0.tgz"
+  "version" "1.1.0"
+
 "@iconify-icons/flat-color-icons@^1.1.0":
   "integrity" "sha512-tniSR0t1e3IA4QJwMC4VU6hmDcd0OouyUb8Q3Qd4x59SIj3ChELTdCYoMHMxPmERapG06D06MZCh032YybfiiQ=="
   "resolved" "https://registry.npmjs.org/@iconify-icons/flat-color-icons/-/flat-color-icons-1.1.0.tgz"

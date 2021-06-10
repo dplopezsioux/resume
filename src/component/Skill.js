@@ -31,7 +31,7 @@ class Listskill extends React.Component {
               <div className="pb-3 mb-0 small lh-sm  w-100">
                 <div className="d-flex justify-content-between">
                   <strong className="text-gray-dark">{elemt.name}</strong>
-                  <a target="_blank" href={elemt.url}>
+                  <a target="_blank" rel="noreferrer" href={elemt.url}>
                     got to ...
                   </a>
                 </div>

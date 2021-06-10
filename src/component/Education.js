@@ -28,7 +28,7 @@ const Description = () => {
               href="https://courses.edx.org/certificates/e9e6073259374dda9d8fb0c0298bc3e8"
               className="btn btn-primary"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noreferrer"
             >
               Go to validation
             </a>
@@ -45,7 +45,7 @@ const Description = () => {
               href="https://courses.edx.org/certificates/cff61b6bf4a84293beb011510f762d3f"
               className="btn btn-primary"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noreferrer"
             >
               Go to validation
             </a>
