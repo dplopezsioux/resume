@@ -13,7 +13,7 @@ const Resume = () => {
         <div className="shadow-lg bg-dark text-secondary px-4 py-5 text-center">
           <div className="container">
             <div className="row g-0">
-              <div className="col-sm-6 col-md-4 text-end">
+              <h1 className="display-5 fw-bold">
                 <img
                   className="d-block mx-auto mb-4 rounded float-end"
                   src={avatar}
@@ -21,10 +21,8 @@ const Resume = () => {
                   width="50"
                   height="50"
                 />
-              </div>
-              <div className="col-6 col-md-8 text-start">
-                <h1 className="display-5 fw-bold"> &lt;Daniel Perez /&gt;</h1>
-              </div>
+                &lt;Daniel Perez /&gt;
+              </h1>
             </div>
           </div>
 
