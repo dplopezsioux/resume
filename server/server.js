@@ -22,7 +22,15 @@ app.use(cors());
 //
 //
 //
-app.use(express.static("public"));
+app.use("/", express.static("public"));
+app.use("/models", express.static("models"));
+//
+//
+//
+//      config html and ejs folder
+//
+//
+//
 app.set("view engine", "ejs");
 //
 //

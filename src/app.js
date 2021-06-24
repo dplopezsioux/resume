@@ -9,6 +9,7 @@ import Skill from "./component/Skill";
 import Education from "./component/Education";
 import Builtit from "./component/Builtit";
 import ContactForm from "./component/ContactForm";
+import Earth from "./component/Earth";
 
 //css
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -20,6 +21,7 @@ class App extends React.Component {
       <>
         <div>
           <div>
+            <Earth />
             <Resume />
             <Builtit />
             <Configurationforthis />

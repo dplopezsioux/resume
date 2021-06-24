@@ -1,7 +1,7 @@
 import React from "react";
 
 //
-import { Icon, InlineIcon } from "@iconify/react";
+import { Icon } from "@iconify/react";
 import welcomeWriteBlog from "@iconify-icons/dashicons/welcome-write-blog";
 
 import avatar from "../img/avatar.png";
@@ -9,7 +9,7 @@ import avatar from "../img/avatar.png";
 const Resume = () => {
   return (
     <>
-      <div>
+      <div className="container mt-5">
         <div className="shadow-lg bg-dark text-secondary px-4 py-5 text-center">
           <div className="container">
             <div className="row g-0">
