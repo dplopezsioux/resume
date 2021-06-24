@@ -56,23 +56,23 @@ const Description = () => {
         <div className="fw-bold fs-3 py-4">Education</div>
         <div className="mb-4 bg-light border rounded-3">
           <div className="container-fluid p-5">
-            <p className="col-md-8 fs-4">
+            <div className="col-md-8 fs-4">
               <h3>
                 <Icon icon={schoolIcon} width="50" height="50" />
                 &#34;University of Pennsylvania&#34;
               </h3>
-              <p1>Computer Science Essentials for Software (2020 – 2022)</p1>
-            </p>
-            <p className="col-md-8 fs-4">
+              <p>Computer Science Essentials for Software (2020 – 2022)</p>
+            </div>
+            <div className="col-md-8 fs-4">
               <h3>
                 <Icon icon={schoolIcon} width="50" height="50" />
                 &#34;Central University of Las Villas&#34;
               </h3>
-              <p1>
+              <p>
                 Electronics and Communication Engineering - Computer
                 Networking(2009 – 2014)
-              </p1>
-            </p>
+              </p>
+            </div>
           </div>
         </div>
       </div>

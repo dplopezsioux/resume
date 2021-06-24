@@ -1218,7 +1218,7 @@
     "@react-spring/rafz" "~9.2.0"
     "@react-spring/types" "~9.2.0"
 
-"@react-spring/three@~9.2.0":
+"@react-spring/three@^9.2.3", "@react-spring/three@~9.2.0":
   version "9.2.3"
   resolved "https://registry.yarnpkg.com/@react-spring/three/-/three-9.2.3.tgz#1871a6c7dcb20ab284b8ce4af1805c86c9bb27ed"
   integrity sha512-DMns/lTWmJ7EFJHf+7CERBAUWWZ314FPQGAcOXFHvMXfxfzBwV8/HGuvlKcdNsTqXfCi3PcYQEAWhpFF/YgVbA==

@@ -4,7 +4,7 @@ require("@babel/polyfill");
 
 module.exports = {
   mode: "production",
-  entry: ["@babel/polyfill", path.resolve(__dirname, "./src/app.js")],
+  entry: ["@babel/polyfill", path.resolve(__dirname, "./src/App.js")],
   devtool: "source-map",
   module: {
     rules: [
