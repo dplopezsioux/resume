@@ -1,21 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import React, { useEffect, useState, Suspense } from "react";
+import { Canvas, useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-import { Stars, OrbitControls } from "@react-three/drei";
+import { Stars, OrbitControls, Environment } from "@react-three/drei";
 
 import "./css/earth.css";
 
 const ObjEarth = () => {
-  const [model, setModel] = useState(null);
-  useEffect(() => {
-    new GLTFLoader().load("/models/earth/scene.gltf", (val) => {
-      val.scene.scale.set(0.05, 0.05, 0.05);
-      setModel(val);
-    });
-  });
-
-  return model ? <primitive object={model.scene} /> : null;
+  const model = useLoader(GLTFLoader, "/models/earth/scene.gltf");
+  return model ? <primitive object={model.scene} scale={0.05} /> : null;
 };
 const Earth = () => {
   return (
@@ -26,16 +19,10 @@ const Earth = () => {
 };
 
 const ObjSun = () => {
-  const [model, setModel] = useState(null);
-  useEffect(() => {
-    new GLTFLoader().load("/models/sun/scene.gltf", (val) => {
-      val.scene.scale.set(1, 1, 1);
-      setModel(val);
-    });
-  });
-
-  return model ? <primitive object={model.scene} /> : null;
+  const model = useLoader(GLTFLoader, "/models/sun/scene.gltf");
+  return model ? <primitive object={model.scene} scale={1} /> : null;
 };
+
 const Sun = () => {
   return (
     <mesh position={[30, 30, -160]}>
@@ -64,11 +51,17 @@ const SolarS = () => {
   return (
     <div className="boxearth">
       <Canvas camera={{ position: [0, 0, 20] }}>
-        <Space />
-        <ambientLight intensity={0.1} />
-        <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
-        <Earth />
-        <Sun />
+        <Suspense fallback={null}>
+          <Space />
+          <ambientLight intensity={0.1} />
+          <OrbitControls
+            enablePan={true}
+            enableZoom={true}
+            enableRotate={true}
+          />
+          <Earth />
+          <Sun />
+        </Suspense>
       </Canvas>
     </div>
   );
