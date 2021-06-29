@@ -18,12 +18,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const App = () => {
   return (
     <div>
-      <SolarS />
       <Resume />
+
       <Builtit />
+
+      <SolarS />
+
       <Configurationforthis />
+
       <Education />
+
       <Skill />
+
       <ContactForm />
     </div>
   );

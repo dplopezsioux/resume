@@ -1,10 +1,16 @@
-import React, { useEffect, useState, Suspense } from "react";
+import React, { Suspense } from "react";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-import { Stars, OrbitControls, Environment } from "@react-three/drei";
+import { Stars, OrbitControls } from "@react-three/drei";
 
 import "./css/earth.css";
+
+//
+
+import { Icon } from "@iconify/react";
+import icon3dModel from "@iconify-icons/file-icons/3d-model";
+//
 
 const ObjEarth = () => {
   const model = useLoader(GLTFLoader, "/models/earth/scene.gltf");
@@ -49,20 +55,33 @@ const Space = () => {
 
 const SolarS = () => {
   return (
-    <div className="boxearth">
-      <Canvas camera={{ position: [0, 0, 20] }}>
-        <Suspense fallback={null}>
-          <Space />
-          <ambientLight intensity={0.1} />
-          <OrbitControls
-            enablePan={true}
-            enableZoom={true}
-            enableRotate={true}
-          />
-          <Earth />
-          <Sun />
-        </Suspense>
-      </Canvas>
+    <div className="container">
+      <div
+        className="container mt-5 px-3 py-4 bg-light"
+        id="featured-3 bg-secondary"
+      >
+        <div className="pb-3 mb-4 border-bottom">
+          <Icon icon={icon3dModel} width="50" height="50" />
+          <span className="fs-4">
+            <span> &#123; @react-three &#125;</span> React renderer for threejs.
+          </span>
+        </div>
+        <div className="boxearth rounded-3 bg-dark">
+          <Canvas camera={{ position: [0, 0, 20] }}>
+            <Suspense fallback={null}>
+              <Space />
+              <ambientLight intensity={0.1} />
+              <OrbitControls
+                enablePan={true}
+                enableZoom={true}
+                enableRotate={true}
+              />
+              <Earth />
+              <Sun />
+            </Suspense>
+          </Canvas>
+        </div>
+      </div>
     </div>
   );
 };
