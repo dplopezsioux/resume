@@ -10,6 +10,7 @@ import Education from "./component/Education";
 import Builtit from "./component/Builtit";
 import ContactForm from "./component/ContactForm";
 import SolarS from "./component/SolarS";
+import Shoes from "./component/Shoes";
 
 //css
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -18,6 +19,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const App = () => {
   return (
     <div>
+      <Shoes />
+
       <Resume />
 
       <Builtit />

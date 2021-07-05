@@ -79,6 +79,7 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-spring": "^9.2.3",
-    "three": "^0.129.0"
+    "three": "^0.129.0",
+    "valtio": "^1.0.6"
   }
 }
