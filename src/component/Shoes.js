@@ -23,11 +23,17 @@ const state = {
 function Shoe(props) {
   const group = useRef();
   //const snap = useSnapshot(state);
-  const { nodes, materials } = useGLTF("/shoe.glb");
+  const { nodes, materials } = useGLTF("/models/shoes/shoe.glb");
 
   const [colorMap, displacementMap, normalMap, roughnessMap, aoMap] = useLoader(
     TextureLoader,
-    ["map1.jpg", "map2.jpg", "map3.jpg", "map4.jpg", "map5.jpg"]
+    [
+      "models/shoes/map1.jpg",
+      "models/shoes/map2.jpg",
+      "models/shoes/map3.jpg",
+      "models/shoes/map4.jpg",
+      "models/shoes/map5.jpg",
+    ]
   );
 
   return (
