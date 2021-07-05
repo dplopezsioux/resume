@@ -96,6 +96,7 @@ function Shoe(props) {
         <meshBasicMaterial
           attach="material"
           color="#A9BFD5" //back shoe
+          color="#A9BFD5" //back shoeeeee
           opacity={1}
           transparent
         />
