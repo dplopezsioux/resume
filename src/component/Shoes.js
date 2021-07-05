@@ -95,7 +95,6 @@ function Shoe(props) {
       <mesh geometry={nodes.shoe_7.geometry} material={materials.patch}>
         <meshBasicMaterial
           attach="material"
-          color="#A9BFD5" //back shoe
           color="#A9BFD5" //back shoeeeee
           opacity={1}
           transparent
