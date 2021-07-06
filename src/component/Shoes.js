@@ -1,23 +1,16 @@
-import { Canvas, useLoader } from "@react-three/fiber";
 import { Canvas, events, useLoader, useThree } from "@react-three/fiber";
 import React, { useRef, useState, Suspense } from "react";
 import { proxy, useSnapshot } from "valtio";
-import { useGLTF, OrbitControls } from "@react-three/drei";
 import { useGLTF, OrbitControls, ContactShadows } from "@react-three/drei";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
+3;
 import { GithubPicker } from "react-color";
 
 import "./css/shoe.css";
 
-const state = {
 const state = proxy({
   current: null,
   items: {
-    laces: "#ffffff",
-    mech: "#ffffff",
-    caps: "#ffffff",
-    inner: "#ffffff",
-    sole: "#ffffff",
     laces: "#FF0000",
     mech: "#C8C8C8",
     caps: "#ff00ff",
