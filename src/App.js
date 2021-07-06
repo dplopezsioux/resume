@@ -11,7 +11,6 @@ import Builtit from "./component/Builtit";
 import ContactForm from "./component/ContactForm";
 import SolarS from "./component/SolarS";
 import Shoes from "./component/Shoes";
-import Test from "./component/Test";
 
 //css
 import "bootstrap/dist/css/bootstrap.min.css";
