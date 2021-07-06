@@ -55,7 +55,10 @@ const Space = () => {
 
 const SolarS = () => {
   return (
-    <div className="mt-5 px-3 py-4 bg-light" id="featured-3 bg-secondary">
+    <div
+      className="container mt-5 px-3 py-4 bg-light"
+      id="featured-3 bg-secondary"
+    >
       <div className="pb-3 mb-4 border-bottom">
         <Icon icon={icon3dModel} width="50" height="50" />
         <span className="fs-4">

@@ -1,9 +1,12 @@
-import { Canvas, events, useLoader, useThree } from "@react-three/fiber";
+import { Canvas, useLoader } from "@react-three/fiber";
 import React, { useRef, useState, Suspense } from "react";
 import { proxy, useSnapshot } from "valtio";
 import { useGLTF, OrbitControls, ContactShadows } from "@react-three/drei";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
-3;
+//
+import { Icon } from "@iconify/react";
+import icon3dModel from "@iconify-icons/file-icons/3d-model";
+//
 import { GithubPicker } from "react-color";
 
 import "./css/shoe.css";
@@ -91,7 +94,7 @@ function Shoe(props) {
         <meshBasicMaterial
           name="laces"
           attach="material"
-          map={null}
+          map={mapLoad(snap.texture.laces)}
           color={snap.items.laces}
           opacity={1}
           transparent
@@ -109,7 +112,7 @@ function Shoe(props) {
       </mesh>
       <mesh geometry={nodes.shoe_2.geometry} material={materials.stripes}>
         <meshBasicMaterial
-          map={stone}
+          map={mapLoad(snap.texture.stripes)}
           name="stripes"
           //attach="material"
           color={snap.items.stripes} //Hojales
@@ -120,7 +123,7 @@ function Shoe(props) {
       <mesh geometry={nodes.shoe_3.geometry} material={materials.inner}>
         <meshBasicMaterial
           name="inner"
-          map={stone}
+          map={mapLoad(snap.texture.inner)}
           attach="material"
           color={snap.items.inner} //inside shoe
           opacity={1}
@@ -130,7 +133,7 @@ function Shoe(props) {
       <mesh geometry={nodes.shoe_4.geometry} material={materials.sole}>
         <meshBasicMaterial
           name="sole"
-          map={stone}
+          map={mapLoad(snap.texture.sole)}
           attach="material" //Sole
           color={snap.items.sole}
           opacity={1}
@@ -140,7 +143,7 @@ function Shoe(props) {
       <mesh geometry={nodes.shoe_5.geometry} material={materials.stripes}>
         <meshBasicMaterial
           name="stripes"
-          map={stone}
+          map={mapLoad(snap.texture.stripes)}
           attach="material" //vertical line
           color={snap.items.stripes}
           opacity={1}
@@ -150,7 +153,7 @@ function Shoe(props) {
       <mesh geometry={nodes.shoe_6.geometry} material={materials.band}>
         <meshBasicMaterial
           name="band"
-          map={stone}
+          map={mapLoad(snap.texture.band)}
           attach="material" //simple line
           color={snap.items.band}
           opacity={1}
@@ -160,7 +163,7 @@ function Shoe(props) {
       <mesh geometry={nodes.shoe_7.geometry} material={materials.patch}>
         <meshBasicMaterial
           name="patch"
-          map={stone}
+          map={mapLoad(snap.texture.patch)}
           attach="material"
           color={snap.items.patch} //back shoeeeee
           opacity={1}
@@ -174,23 +177,38 @@ function Shoe(props) {
 const TextureE = (event) => {
   const { eventHandle } = event;
   return (
-    <div>
-      <button className="btn btn-primary btn-sm" onClick={eventHandle}>
+    <>
+      <button
+        className="btn btn-primary btn-lg btn-block m-1"
+        onClick={eventHandle}
+      >
         blueholes
       </button>
-      <button className="btn btn-primary btn-sm" onClick={eventHandle}>
+      <button
+        className="btn btn-primary btn-lg btn-block m-1"
+        onClick={eventHandle}
+      >
         leather
       </button>
-      <button className="btn btn-primary btn-sm" onClick={eventHandle}>
+      <button
+        className="btn btn-primary btn-lg btn-block m-1"
+        onClick={eventHandle}
+      >
         plants
       </button>
-      <button className="btn btn-primary btn-sm" onClick={eventHandle}>
+      <button
+        className="btn btn-primary btn-lg btn-block m-1"
+        onClick={eventHandle}
+      >
         stone
       </button>
-      <button className="btn btn-primary btn-sm" onClick={eventHandle}>
+      <button
+        className="btn btn-primary btn-lg btn-block m-1"
+        onClick={eventHandle}
+      >
         plastic
       </button>
-    </div>
+    </>
   );
 };
 
@@ -198,7 +216,7 @@ function SelecElemnt() {
   const snap = useSnapshot(state);
 
   return (
-    <div className="container text-center text-light p-3">
+    <>
       <GithubPicker
         color={snap.items[snap.current]}
         onChange={(color) => {
@@ -208,22 +226,29 @@ function SelecElemnt() {
       <TextureE
         eventHandle={(e) => {
           state.texture[(state.texture[snap.current] = e.target.outerText)];
-          console.log(state);
+          console.log(state.texture);
         }}
       />
-      {snap.current == null ? "Select part" : snap.current}
-    </div>
+    </>
   );
 }
 
 const Shoes = () => {
+  const snap = useSnapshot(state);
   return (
-    <div className="container text-center h3 bg-dark text-uppercase">
+    <div className="container ">
+      <div className="pb-3 mb-4 border-bottom">
+        <Icon icon={icon3dModel} width="50" height="50" />
+        <span className="fs-4">
+          <span> &#123; @react-three &#125;</span> Rendering.
+        </span>
+      </div>
       <div className="row">
         <div className="col-sm-2 col-md-3">
           <SelecElemnt />
         </div>
-        <div className="col-sm-10 offset-sm-2 col-md-9 offset-md-0">
+        <div className="col-sm-10 offset-sm-2 col-md-9 offset-md-0 text-center h3 text-light bg-dark text-uppercas">
+          {snap.current == null ? "First select part ..." : snap.current}
           <div className="boxshoe">
             <Canvas camera={{ position: [1, 0.5, 1.6] }}>
               <ambientLight intensity={0.5} />
