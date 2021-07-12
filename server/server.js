@@ -37,7 +37,7 @@ app.set("view engine", "ejs");
 //     render front page!
 //
 //
-app.get("/", function (req, res) {
+app.get("*", function (req, res) {
   res.render("pages/index");
 });
 //
