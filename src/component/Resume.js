@@ -9,7 +9,7 @@ import avatar from "../img/avatar.png";
 const Resume = () => {
   return (
     <>
-      <div className="container mt-5">
+      <div className="container mt-2 mb-2">
         <div className="shadow-lg bg-dark text-secondary px-4 py-5 text-center">
           <div className="container">
             <div className="row g-0">

@@ -236,8 +236,8 @@ function SelecElemnt() {
 const Shoes = () => {
   const snap = useSnapshot(state);
   return (
-    <div className="container ">
-      <div className="pb-3 mb-4 border-bottom">
+    <div className="container mt-5 px-3 py-4 bg-light ">
+      <div className="pb-3 border-bottom">
         <Icon icon={icon3dModel} width="50" height="50" />
         <span className="fs-4">
           <span> &#123; @react-three &#125;</span> Rendering.

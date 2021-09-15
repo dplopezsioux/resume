@@ -11,6 +11,8 @@ import Builtit from "./component/Builtit";
 import ContactForm from "./component/ContactForm";
 import SolarS from "./component/SolarS";
 import Shoes from "./component/Shoes";
+import Menu from "./component/Menu";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //css
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -19,20 +21,26 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const App = () => {
   return (
     <div>
-      <Resume />
-
-      <Builtit />
-
-      <Shoes />
-
-      <SolarS />
-
-      <Configurationforthis />
-
-      <Education />
-
-      <Skill />
-
+      <Router>
+        <Menu />
+        <Resume />
+        <div>
+          <Switch>
+            <Route exact path="/">
+              <Builtit />
+              <Configurationforthis />
+            </Route>
+            <Route path="/about">
+              <Education />
+              <Skill />
+            </Route>
+            <Route path="/examples">
+              <Shoes />
+              <SolarS />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
       <ContactForm />
     </div>
   );
